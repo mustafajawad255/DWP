@@ -1,0 +1,46 @@
+form {
+    display: grid;
+    justify-items: end;
+    grid-template-columns: 200px 200px;
+    gap: 5px;
+}
+
+.displayOutput {    
+    padding-left: 200px;   
+}
+
+#displayOutput::after {
+    content: "\a";
+    white-space: pre;
+}
+
+form input {
+    justify-self: stretch;
+}
+
+form button {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+#form button::after {
+    content: "\a";
+    white-space: pre;
+}
+
+input:valid.visited {
+    border: 2px solid green;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:focus-visible {
+    border: 2px solid black;
+    outline: none;
+}
+
+input:focus-visible:invalid {
+    border: 2px solid red;
+}

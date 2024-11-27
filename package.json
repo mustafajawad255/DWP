@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@types/jasmine": "^5.1.4",
+    "jasmine": "^5.4.0",
+    "nyc": "^17.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "test": "ts-node node_modules/jasmine/bin/jasmine",
+    "coverage": "nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test"
+  }
+}
